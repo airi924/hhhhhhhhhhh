@@ -40,7 +40,7 @@ jobs:
         if: steps.check.outputs.run == 'true'
         uses: actions/checkout@v4
         with:
-          repository: airi924/hax
+          repository: akina251208/hax
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           path: .
 
@@ -82,7 +82,7 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}
           # --- 2. 核心新增：确保脚本内部如有推送动作，也能准确推回私库 ---
           MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: 'airi924/hax'
+          GITHUB_REPOSITORY: 'akina251208/hax'
           
         run: python hax_renw.py  
 
